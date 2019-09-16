@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Onsen App</title>
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" type="text/css" href="path/to/onsen-css-components.css">
+
+</head>
+
+<style>
+    #mypage .div {
+        top: 0;   
+    }
+    #mypage3 .page__background {
+    background-color: lightgoldenrodyellow;
+  }
+</style>
+
+<body>
+    <ons-navigator id="myNavigator" page="FoodCategory.html"></ons-navigator>
+
+    <center>
+
+            <ons-page id='mypage3'>
+         <div>
+
+                <ons-page>
+
+                    <ons-toolbar>
+                        <div class="left" style="background:rgb(170, 153, 4);">
+                            <ons-toolbar-button onclick="prev()">
+                                <ons-icon icon="md-chevron-left"></ons-icon>
+                            </ons-toolbar-button>
+                        </div>
+                        <div class="center" style="background:rgb(170, 153, 4);" >Category of foods</div>
+                        <div class="right" style="background:rgb(170, 153, 4);"></div>
+                    </ons-toolbar>
+
+
+                        
+                        <div class="left" style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
+                          <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
+                          &nbsp; <p></p> &nbsp; 
+                          <img src="imag/food.png" alt="Logo pizza" style="width:70px; height:70px;">
+                        </div>
+                      
+                        <p style="text-align: center;">
+                          <ons-button ripple>Street Food</ons-button>
+                        </p>
+                        
+                        <div style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
+                          <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
+                          &nbsp; <p></p> &nbsp; 
+                          <img src="imag/sweets.png" alt="Logo pizza" style="width:70px; height:70px;">
+                        </div>
+                      
+                        <p style="text-align: center;">
+                                <ons-button ripple>Sweets</ons-button>
+                        </p>
+
+                        <ons-button modifier="quiet">more...</ons-button>  
+                        
+                      </ons-page>
+                      
+
+
+
+                    </div>
+        
+                </ons-page>
+
+                </center>
+            </body>
+            
+            </html>
