@@ -53,12 +53,20 @@
 
         <p>
           <p>Don't have an account?</p>
-          <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(172, 63, 235);">Register</ons-button>
+          <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(172, 63, 235);"  onclick="login()">Register</ons-button>
         </p>
       </div>
-
+   
     </ons-page>
   </center>
+
+  <script>
+    function login() {
+      window.location.href='register.html'
+    } 
+    </script>
+
+
 </body>
 
 </html>

@@ -48,7 +48,7 @@
                 <p style="opacity: 0.8; padding-top: 0px;">
                   <center>
 
-                    <ons-button modifier="quiet">RESTAURANT MENU</ons-button>
+                    <ons-button modifier="quiet"  onclick="login2()">RESTAURANT MENU</ons-button>
 
                   </center>
                 </p>
@@ -111,21 +111,35 @@
               <p>
                 <h3>Pay via</h3>
                 <ons-button id="registerbt" class="button--large--cta"
-                  style="background-color: rgb(177, 34, 206);width: 280px; border-radius: 10px; margin: 0 auto;">
+                  style="background-color: rgb(177, 34, 206);width: 280px; border-radius: 10px; margin: 0 auto;"  onclick="login()">
                   Credit Card</ons-button></br>
 
                 <ons-button id="registerbt" class="button--large--cta"
-                  style="background-color: rgb(16, 126, 199);width: 280px; border-radius: 10px; margin: 0 auto;">
+                  style="background-color: rgb(16, 126, 199);width: 280px; border-radius: 10px; margin: 0 auto;"  onclick="login()">
                   PayPal</ons-button></br>
 
                 <ons-button id="registerbt" class="button--large--cta"
-                  style="background-color: rgb(41, 184, 23);width: 280px; border-radius: 10px; margin: 0 auto;">
+                  style="background-color: rgb(41, 184, 23);width: 280px; border-radius: 10px; margin: 0 auto;"  onclick="login()">
                   Cash on Delivery</ons-button></br>
               </p>
             </center>
           </ons-card>
         </ons-page>
   </center>
+
+
+  <script>
+    function login() {
+      window.location.href='resturantlist.html'
+    } 
+    </script>
+
+<script>
+  function login2() {
+    window.location.href='ResturantMenu.html'  
+  } 
+  </script>
+
 </body>
 
 </html>

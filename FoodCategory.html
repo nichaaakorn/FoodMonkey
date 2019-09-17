@@ -37,7 +37,7 @@
                     <ons-toolbar>
                         <div class="left" style="background:rgb(170, 153, 4);">
                             <ons-toolbar-button onclick="prev()">
-                                <ons-icon icon="md-chevron-left"></ons-icon>
+                                 <ons-icon icon="md-chevron-left"></ons-icon>
                             </ons-toolbar-button>
                         </div>
                         <div class="center" style="background:rgb(170, 153, 4);" >Category of foods</div>
@@ -53,7 +53,7 @@
                         </div>
                       
                         <p style="text-align: center;">
-                          <ons-button ripple>Street Food</ons-button>
+                          <ons-button ripple  onclick="login()">Street Food</ons-button>
                         </p>
                         
                         <div style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
@@ -63,7 +63,7 @@
                         </div>
                       
                         <p style="text-align: center;">
-                                <ons-button ripple>Sweets</ons-button>
+                                <ons-button ripple  onclick="login()">Sweets</ons-button>
                         </p>
 
                         <ons-button modifier="quiet">more...</ons-button>  
@@ -78,6 +78,14 @@
                 </ons-page>
 
                 </center>
+
+                <script>
+                  function login() {
+                    window.location.href='resturantlist.html'
+                  } 
+                  </script>
+
+
             </body>
             
             </html>

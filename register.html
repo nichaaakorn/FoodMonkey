@@ -53,8 +53,8 @@
                 </p>
 
                 <p>
-                    <ons-button id="registerbt" class="button--large--cta"
-                        style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(58, 169, 206);">Register</ons-button>
+                  <ons-button id="registerbt" class="button--large--cta"
+                        style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(58, 169, 206);"  onclick="login()">Register</ons-button>
                 </p>
 
                 <p style="align-content: center; color:Gray;">or</p>
@@ -62,17 +62,24 @@
                 <p>
                     <button class="toolbar-button" >
                         <ons-button id="facebookbt" class="button--large--cta" 
-                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:darkblue; ">Facebook</ons-button>
+                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:darkblue; "  onclick="login()">Facebook</ons-button>
                     </button>
                     <button class="toolbar-button">
                         <ons-button id="gmailbt" class="button--large--cta"
-                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:red;">Gmail</ons-button>
+                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:red;"  onclick="login()">Gmail</ons-button>
                     </button>
                 </p>
             </div>
 
         </ons-page>
     </center>
+
+    <script>
+        function login() {
+          window.location.href='FoodCategory.html' 
+        } 
+        </script>
+
 </body>
 
 </html>
