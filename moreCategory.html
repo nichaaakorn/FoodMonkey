@@ -37,7 +37,7 @@
 
                     <ons-toolbar>
                         <div class="left" style="background:rgb(170, 153, 4);">
-                            <ons-toolbar-button onclick="prev()">
+                            <ons-toolbar-button onclick="back()">
                                 <ons-icon icon="md-chevron-left"></ons-icon>
                             </ons-toolbar-button>
                         </div>
@@ -50,7 +50,7 @@
                     <div class="left" style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
                         <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
                         &nbsp; <p></p> &nbsp;
-                        <img src="imag/street.svg"  style="width:70px; height:70px;">
+                        <img src="imag/street.svg" style="width:70px; height:70px;">
                     </div>
 
                     <p style="text-align: center;">
@@ -60,7 +60,7 @@
                     <div style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
                         <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
                         &nbsp; <p></p> &nbsp;
-                        <img src="imag/sweets.png"  style="width:70px; height:70px;">
+                        <img src="imag/sweets.png" style="width:70px; height:70px;">
                     </div>
 
                     <p style="text-align: center;">
@@ -70,7 +70,7 @@
                     <div class="left" style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
                         <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
                         &nbsp; <p></p> &nbsp;
-                        <img src="imag/food.png"  style="width:70px; height:70px;">
+                        <img src="imag/food.png" style="width:70px; height:70px;">
                     </div>
 
                     <p style="text-align: center;">
@@ -78,14 +78,14 @@
                     </p>
 
                     <div class="left" style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
-                            <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
-                            &nbsp; <p></p> &nbsp;
-                            <img src="imag/drink.svg"  style="width:70px; height:70px;">
-                        </div>
-    
-                        <p style="text-align: center;">
-                            <ons-button ripple onclick="drink()">Beverage</ons-button>
-                        </p>
+                        <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
+                        &nbsp; <p></p> &nbsp;
+                        <img src="imag/drink.svg" style="width:70px; height:70px;">
+                    </div>
+
+                    <p style="text-align: center;">
+                        <ons-button ripple onclick="drink()">Beverage</ons-button>
+                    </p>
 
 
 
@@ -102,11 +102,21 @@
     </center>
 
     <script>
-        function streetFood() {
+
+        function back() {
             window.location.href = 'resturantlist.html'
         }
-        function prev() {
-            window.location.href = 'resturantlist.html'
+        function streetFood() {
+            window.location.href = 'Street.html'
+        }
+        function sweetFood() {
+            window.location.href = 'Sweet.html'
+        }
+        function thaiFood() {
+            window.location.href = 'Thai.html'
+        }
+        function drink() {
+            window.location.href = 'drink.html'
         }
 
     </script>
