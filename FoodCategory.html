@@ -53,7 +53,7 @@
                         </div>
                       
                         <p style="text-align: center;">
-                          <ons-button ripple  onclick="login()">Street Food</ons-button>
+                          <ons-button ripple  onclick="streetFood()">Street Food</ons-button>
                         </p>
                         
                         <div style="width: 150px; height: 150px; margin: 10px auto; background-color: yellow;">
@@ -63,10 +63,13 @@
                         </div>
                       
                         <p style="text-align: center;">
-                                <ons-button ripple  onclick="login()">Sweets</ons-button>
+                                <ons-button ripple  onclick="sweetFood()">Sweets</ons-button>
                         </p>
 
-                        <ons-button modifier="quiet">more...</ons-button>  
+                        <ons-toolbar-button onclick="more()">
+                            <ons-button modifier="quiet">more...</ons-button>
+                       </ons-toolbar-button>
+                          
                         
                       </ons-page>
                       
@@ -80,11 +83,14 @@
                 </center>
 
                 <script>
-                  function login() {
+                  function streetFood() {
                     window.location.href='resturantlist.html'
                   } 
                   function prev() {
                     window.location.href='resturantlist.html'
+                  }
+                  function more() {
+                    window.location.href='moreCategory.html'
                   }
                   </script>
 
