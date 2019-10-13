@@ -15,10 +15,10 @@
 </head>
 
 <style>
-        #mypage .page__background {
-          background-color: rgb(233, 213, 98);
-        }
-      </style>
+    #mypage .page__background {
+        background-color: rgb(233, 213, 98);
+    }
+</style>
 
 <body>
     <ons-navigator id="myNavigator" page="resturantlist.html"></ons-navigator>
@@ -33,17 +33,36 @@
                         onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
                 </p>
 
+                <ons-list-item onclick="option()">
+                    <div class="right">
+                        <img src="imag/option.svg" style="width:20px; height:20px;">
+                    </div>
+                </ons-list-item>
 
-                <ons-list-header  onclick="login()">Kathu Cafe</ons-list-header>
+                <ons-list-item onclick="cart()">
+                    <div class="right">
+                        <img src="imag/cart.svg" style="width:20px; height:20px;">
+                    </div>
+                </ons-list-item>
+
+
+                <ons-list-header onclick="login()">Kathu Cafe</ons-list-header>
                 <ons-list-item>
                     <div class="left">
-                        <img class="list-item__thumbnail" src="imag/cake.jpg" style="width:100px; height:100px;">
+                        <img class="list-item__thumbnail" src="imag/cake.jpg" style="width:100px; height:80px;">
                     </div>
                     <div class="center">
-                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
-                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
-                            <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
-                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                        <span class="list-item__title">
+                            <ons-icon icon="pin"></ons-icon> kathu,phuket
+                        </span>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <span class="list-item__subtitle">
+                            <ons-icon icon="bicycle"></ons-icon> Free Delivery
+                        </span>
                     </div>
                 </ons-list-item>
 
@@ -51,13 +70,20 @@
                 <ons-list-header>Tam Sang Mea Ma Nee</ons-list-header>
                 <ons-list-item>
                     <div class="left">
-                        <img class="list-item__thumbnail" src="imag/tamSang.jpg" style="width:100px; height:100px;">
+                        <img class="list-item__thumbnail" src="imag/tamSang.jpg" style="width:100px; height:80px;">
                     </div>
                     <div class="center">
-                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
-                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
-                            <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star-half"></ons-icon>
-                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                        <span class="list-item__title">
+                            <ons-icon icon="pin"></ons-icon> kathu,phuket
+                        </span>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star-half"></ons-icon>
+                        <span class="list-item__subtitle">
+                            <ons-icon icon="bicycle"></ons-icon> Free Delivery
+                        </span>
                     </div>
                 </ons-list-item>
 
@@ -65,17 +91,28 @@
                 <ons-list-header>KluayTod Kathu</ons-list-header>
                 <ons-list-item>
                     <div class="left">
-                        <img class="list-item__thumbnail" src="imag/banana.jpg" style="width:100px; height:100px;">
+                        <img class="list-item__thumbnail" src="imag/banana.jpg" style="width:100px; height:80px;">
                     </div>
                     <div class="center">
-                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
-                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
-                             <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
-                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                        <span class="list-item__title">
+                            <ons-icon icon="pin"></ons-icon> kathu,phuket
+                        </span>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <ons-icon icon="star"></ons-icon>
+                        <span class="list-item__subtitle">
+                            <ons-icon icon="bicycle"></ons-icon> Free Delivery
+                        </span>
                     </div>
                 </ons-list-item>
 
-                <ons-button modifier="quiet">view more...</ons-button>
+
+                <ons-toolbar-button onclick="more()">
+                    <ons-button modifier="quiet">view more...</ons-button>
+                </ons-toolbar-button>
+
 
             </ons-page>
 
@@ -95,11 +132,20 @@
 
     <script>
         function login() {
-          window.location.href='ResturantMenu.html' 
-        } 
-        </script>
+            window.location.href = 'ResturantMenu.html'
+        }
+        function option() {
+            window.location.href = 'FoodCategory.html'
+        }
+        function cart() {
+            window.location.href = 'Cart.html'
+        }
+        function more() {
+            window.location.href = 'moreList.html'
+        }
+    </script>
 
-    
+
 </body>
 
 </html>

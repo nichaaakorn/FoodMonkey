@@ -29,11 +29,11 @@
                 
                     <ons-toolbar>
                             <div class="left" style="background:lightyellow">
-                                <ons-toolbar-button onclick="prev()">
+                                <ons-toolbar-button onclick="back()">
                                     <ons-icon icon="md-chevron-left"></ons-icon>
                                 </ons-toolbar-button>
                             </div>
-                            <div class="center" style="background:lightyellow">All restaurants</div>
+                            <div class="center" style="background:lightyellow">All Menu</div>
                             <div class="right" style="background:lightyellow;"></div>
                          </ons-toolbar>
 
@@ -45,22 +45,22 @@
 
                 
                 <p>
-                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="login()">Strawberry Cheesecake 59 ฿</ons-button>
+                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="confirm()">Strawberry Cheesecake 59 ฿</ons-button>
 
                 </p>
 
                 <p>
-                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="login()">Brownie  59 ฿</ons-button>
+                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="confirm()">Brownie  59 ฿</ons-button>
 
                 </p>
 
                 <p>
-                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="login()">Honey Toast  59 ฿</ons-button>
+                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="confirm()">Honey Toast  59 ฿</ons-button>
 
                 </p>
 
                 <p>
-                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="login()">Green Tea Cake  59 ฿</ons-button>
+                        <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 5px; margin: 0 auto; background:rgb(124, 124, 7)"  onclick="confirm()">Green Tea Cake  59 ฿</ons-button>
 
                 </p>
 
@@ -87,9 +87,12 @@
 
 
     <script>
-        function login() {
+        function confirm() {
           window.location.href='OrderConfirmation.html' 
-        } 
+        }
+        function back() {
+            window.location.href='resturantlist.html'
+        }
         </script>
 
 </body>
