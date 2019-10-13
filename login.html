@@ -42,18 +42,18 @@
         </p>
 
         <p style="margin-top: 30px; ">                       
-          <ons-button id="loginbt" onclick="login()">Sign in</ons-button>
+          <ons-button id="loginbt" onclick="signin()">Sign in</ons-button>
         </p>
         
         <p style="align-content: center; color:rgb(63, 62, 62);">or</p>
         
         <p>
-          <ons-button  id="signinfacebt" class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; " >Sign In using Facebook</ons-button>
+          <ons-button  id="signinfacebt" onclick="facebook()" class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; " >Sign In using Facebook</ons-button>
         </p>
 
         <p>
           <p>Don't have an account?</p>
-          <ons-button id="reigterbt"class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(172, 63, 235);"  onclick="login()">Register</ons-button>
+          <ons-button id="reigterbt"  class="button--large--cta" style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(172, 63, 235);"  onclick="regis()">Register</ons-button>
         </p>
       </div>
    
@@ -61,7 +61,7 @@
   </center>
 
   <script>
-    function login() {
+    function regis() {
       window.location.href='register.html'
     } 
     </script>
