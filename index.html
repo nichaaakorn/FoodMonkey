@@ -5,50 +5,246 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Onsen App</title>
+  <title>Onsen</title>
 
-  <script src="lib/onsen/js/onsenui.js"></script>
-  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+ 
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
-<style>
-  #mypage .page__background {
-    background-color: rgb(255, 218, 11);
-  }
-</style>
-
 <body>
-    <ons-navigator id="myNavigator" page="index.html">
-    </ons-navigator>
 
-    <center>
-        <ons-page id='mypage'>
-            <div>
-                
-   &nbsp;
-      <p></p>
-         &nbsp;
-           <p></p>
-              &nbsp;
-               <p  onclick="login()">
-                <img src="imag/mmmonkey.jpg" alt="Logo FoodMonkey" style="width:330px; height:310px;">
-              </p>
+  <!-- First navigation component: Navigator. This will remain always on top of the app. -->
+  <ons-navigator id="myNavigator" page="splitter.html">
+  </ons-navigator>
 
-            
-            <ons-progress-circular  onclick="login()" indeterminate></ons-progress-circular>
+  <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
+  <template id="splitter.html">
+    <ons-page>
+      <ons-splitter id="mySplitter">
+        <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="tabbar.html">
+        </ons-splitter-content>
+      </ons-splitter>
+    </ons-page>
+  </template>
 
-            </ons-page>
-        </center>
+  <!-- //////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////// -->
+  <template id="login.html">
+    <ons-page id="login">
 
-        <script>
-          function login() {
-            window.location.href='login.html'
-          } 
-          </script>
+      <ons-splitter class="contriner" style="background-color: yellow;">
+        <ons-card class="col" >
 
-      </body>
+          <img src="image/lufthansa-new-logo.jpg" style="width:80%">
+
+
+          <div>
+            <center>
+              <h2>Login </h2>
+            </center>
+          </div>
+          <div style="text-align: center;">
+
+
+            <p>
+              <ons-input id="user" placeholder="Username"></ons-input>
+            </p>
+            <p>
+              <ons-input id="pass" type="password" placeholder="Password"></ons-input>
+            </p>
+            <p style="margin-top: 40px; ">
+              <ons-button class="btn" id="btnLogin">Sign in</ons-button>
+
+              <ons-button class="btn" id="btnRegist">Regist</ons-button>
+            </p>
+            <button  class="button--large--cta F"
+              style="width: 75%; margin-top:20px ;margin-left:25px ;">FACEBOOK</button>
+            <button  id="btnGoogle" class="button--large--cta G"
+              style="width: 75%; margin-top:20px ; margin-left:26px ;">GOOGLE</button>
+              <div id="backhomebtn" style="margin-top: 20px;"><ons-icon icon="fa-arrow-left"></ons-icon> Back to Homepage</div>  
+          </div>
+
+
+        </ons-card>
+      </ons-splitter>
+
+    </ons-page>
+
+
+  </template>
+
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////// -->
+  <template id="menu.html">
+    <ons-page id="sidemenu">
+      <ons-list-title id="header"></ons-list-title>
+      <ons-list id="links">
+        <ons-list-item id="homebtn" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item id="SignInbtn" tappable>
+          SignIn
+        </ons-list-item>
+        <ons-list-item id="logoutbtn" tappable>
+          Log out
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </template>
+
+
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////// -->
+  <template id="fastfood.html">
+    <ons-page id="fastfood">
+
+      <div class="contriner">
+
+        <ons-toolbar style="background-color: yellow;" >
+          <div class="left"><i class="fas fa-angle-left icon" id="back"></i></div>
+         <div class="right ">
+          <ons-toolbar-button >
+              <ons-icon icon="fa-user-circle" id="Backhome"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        </ons-toolbar>
+
+
+       <div id="listFastfood"  style="margin-top: 80px;"> 
+   
+      </div>
       
-      </html>
+   
+  
+      </div>
+    </ons-page>
+
+  </template>
+
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////// -->
+  <template id="MenuKfc.html">
+    <ons-page id="Kfc">
+      <div class="contriner">
+
+        <ons-toolbar style="background-color: yellow;">
+          <div class="left"><i class="fas fa-angle-left icon" id="back"></i></div>
+          <div class="right ">
+              <ons-toolbar-button >
+                  <ons-icon icon="fa-user-circle" id="Backhome"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+        
+        <ons-card style="margin-top: 100px;">
+          <div class="mainFood">
+            <div class="col-6">
+              <img src="image/Kfc_logo-9.jpg" style="width:80%">
+
+            </div>
+            <div class="col-6">
+
+            </div>
+          </div>
+<div id="food"></div>
+       
+        </ons-card>
+      </div>
+    </ons-page>
+
+  </template>
+
+
+
+  <!-- ///////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////// -->
+  <template id="orderCf.html">
+
+    <ons-page id="orderCf">
+      <div class="contriner">
+
+        <ons-toolbar style="background-color: yellow;">
+          <div class="left"><i class="fas fa-angle-left icon" id="back"></i></div>
+          <div class="right ">
+              <ons-toolbar-button >
+                  <ons-icon icon="fa-user-circle" id="Backhome"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-card style="margin-top: 80px;">
+          <div class="mainFood">
+            <div class="col-12">
+              <img src="https://www.catdumb.com/wp-content/uploads/2016/02/Kfc_logo-9.jpg" style="width:60%">
+              <center>
+                <h3>Your Order</h3>
+                <p>_____________________________</p>
+              </center>
+            </div>
+          </div>
+          <div class="Food ">
+            <div class="col-4 ">
+              <center>
+                <p>ลำดับ</p>
+
+                <p>1</p>
+
+
+            </div>
+            <div class="col-4">
+              <center>
+                <p>รายการ</p>
+
+                <p>ไก่ไม่มีกระดูกแมสซี่มาโย</p>
+              </center>
+            </div>
+            <div class="col-4">
+              <center>
+                <p>ราคา</p>
+
+                <p>149 THB</p>
+              </center>
+            </div>
+
+
+          </div>
+
+          <ons-button modifier="large" disabled="true" class="large">149 THB</ons-button>
+          <center>
+            <h3>Pay</h3>
+          </center>
+          <ons-button modifier="large" class="large" style="background-color: blue">Credit Card</ons-button>
+          <ons-button modifier="large" class="large" style="background-color: rgb(17, 15, 15)">Cash on Delivery
+          </ons-button>
+
+
+        </ons-card>
+
+        </section>
+
+      </div>
+    </ons-page>
+  </template>
+
+
+ 
+  <script src="lib/onsen/js/onsenui.js"></script>
+  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+ 
+
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
