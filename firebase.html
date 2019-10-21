@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->   
+    
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC9V8Vz_q7041Mrj2GZSzFQbsQJmUWJYQM",
+    authDomain: "foodmonkey-36546.firebaseapp.com",
+    databaseURL: "https://foodmonkey-36546.firebaseio.com",
+    projectId: "foodmonkey-36546",
+    storageBucket: "foodmonkey-36546.appspot.com",
+    messagingSenderId: "249648993939",
+    appId: "1:249648993939:web:d61b879f1bb3b1d1695f66"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  
+  // use firestore 
+  var db = firebase.firestore();
+
+
+  db.collection("recommended").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        console.log(doc.data().name);
+        
+        console.log(doc.data().id);
+    });
+});
+
+ 
+
+
+</script>
+
+
+
+    
+</body>
+</html>
