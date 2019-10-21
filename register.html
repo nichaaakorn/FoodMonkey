@@ -1,24 +1,82 @@
-<ons-page id="regiter">
-      
-    <ons-splitter class="contriner" style="background-color: yellow;">
-            <ons-card class="col">
-                   
-        <div><center><h1>Regist</h1></center></div>
-    <div style="text-align: center; margin-top: 30px;">
-     
-      <p>  
-        <ons-input id="Registemail"  type="email" placeholder="E-mail" ></ons-input>
-      </p>
-      <p>
-        <ons-input id="Registpass"   placeholder="Password" ></ons-input>
-      </p>
-      
-      <p style="margin-top: 40px;">
-        <ons-button class="btn" id="btnRegist1">Regist</ons-button>
-        <ons-button class="btn" id="back">Black</ons-button>
-      </p>
-    </div>
-</ons-card > 
-    </ons-splitter>
-  
-  </ons-page>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodMonkey</title>
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" type="text/css" href="path/to/onsen-css-components.css">
+
+</head>
+
+<style>
+    #mypage .div {
+        top: 0;   
+    }
+    #mypage2 .page__background {
+    background-color: rgb(255, 218, 11);
+  }
+</style>
+
+<body>
+    <ons-navigator id="myNavigator" page="register.html">
+    </ons-navigator>
+    <center>
+        <ons-page id='mypage2'>
+            <div>
+                <p> 
+                    <img src="images/logo_monkey.jpg" align="top" alt="Logo register" style="width:110px; height:100px;">
+                </p>
+
+                <p>Register an Account?</p>
+
+                <p style="margin-top: 30px; border: 1px solid Gray; border-radius: 8px; width: 280px;">
+                    <ons-input id="username" placeholder="Full Name" float></ons-input>
+                </p>
+
+                <p style="margin-top: 30px; border: 1px solid Gray; border-radius: 8px; width: 280px;">
+                    <ons-input id="email" placeholder="Email Address" float></ons-input>
+                </p>
+
+                <p style="margin-top: 30px; border: 1px solid Gray; border-radius: 8px; width: 280px;">
+                    <ons-input id="phonenumber" placeholder="Phone Number" float></ons-input>
+                </p>
+
+                <p style="margin-top: 30px; border: 1px solid Gray; border-radius: 8px; width: 280px;">
+                    <ons-input id="password" type="password" placeholder="Password" float></ons-input>
+                </p>
+
+                <p>
+                  <ons-button id="registerbt" class="button--large--cta"
+                        style="width: 280px; border-radius: 10px; margin: 0 auto; background:rgb(58, 169, 206);"  onclick="login()">Register</ons-button>
+                </p>
+
+                <p style="align-content: center; color:Gray;">or</p>
+
+                <p>
+                    <button class="toolbar-button" >
+                        <ons-button id="facebookbt" class="button--large--cta" 
+                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:darkblue; "  onclick="login()">Facebook</ons-button>
+                    </button>
+                    <button class="toolbar-button">
+                        <ons-button id="gmailbt" class="button--large--cta"
+                            style="width: 125px; border-radius: 10px; margin: 0 auto; background:red;"  onclick="login()">Gmail</ons-button>
+                    </button>
+                </p>
+            </div>
+
+        </ons-page>
+    </center>
+
+
+
+
+</body>
+
+</html>
