@@ -57,10 +57,41 @@ document.addEventListener('init', function (event) {
   if (page.id === 'mypage') {
     console.log("mypage");
 
+    $("#item1").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuSweet.html");
+    });
+
     $("#menuSweet").click(function () {
       console.log(";;;;;;;");
 
       $("#myNavigator")[0].pushPage("MenuSweet.html");
+    });
+
+    $("#item2").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuSweet2.html");
+    });
+
+
+    $("#menuSweet2").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuSweet2.html");
+    });
+
+    $("#menuSweet3").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuSweet3.html");
+    });
+
+    $("#item3").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuStreet.html");
     });
 
 
@@ -74,6 +105,31 @@ document.addEventListener('init', function (event) {
       console.log(";;;;;;;");
 
       $("#myNavigator")[0].pushPage("MenuDrink.html");
+    });
+
+    $("#item4").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuDrink2.html");
+    });
+
+
+    $("#menuDrink2").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuDrink2.html");
+    });
+
+    $("#menuIslam").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuIslam.html");
+    });
+
+    $("#menuIslam2").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("MenuIslam2.html");
     });
 
   }
