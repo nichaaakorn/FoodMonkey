@@ -26,7 +26,13 @@ document.addEventListener('init', function (event) {
     $("#sweets").click(function () {
       console.log(";;;;;;;");
       
-      $("#content")[0].load("MenuSweet.html");   
+      $("#content")[0].load("Sweet.html");   
+    });
+
+    $("#street").click(function () {
+      console.log(";;;;;;;");
+      
+      $("#content")[0].load("MenuStreet.html");   
     });
   }
 

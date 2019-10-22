@@ -61,7 +61,7 @@
             <ons-row class="category">
 
 
-                <ons-col modifier="nodivider">
+                <ons-col modifier="nodivider" id="street">
                     <div id="btn1" class="category_wrapper"
                         style="background-image: url('images/street.svg');background-size: 95%;">
                         <figure class="category_thumbnail" id="fastfoodbtn">
@@ -72,7 +72,7 @@
 
 
 
-                <ons-col modifier="nodivider" id="sweets">
+                <ons-col modifier="nodivider" id="sweets"> 
                     <div id="btn2" class="category_wrapper"
                         style="background-image: url('images/sweets.png');background-size: 100%;">
                         <!-- <figure class="category_thumbnail" id="dessertbtn"  onclick="sweets()"> -->
@@ -199,6 +199,11 @@
     } 
     function sweets() {
         // window.location.href = 'MenuSweet.html'
-        $("#content")[0].load("MenuSweet.html");
+        $("#content")[0].load("Sweet.html");
     } 
+    function street() {
+        // window.location.href = 'MenuSweet.html'
+        $("#content")[0].load("MenuStreet.html");
+    }
+
 </script>  
