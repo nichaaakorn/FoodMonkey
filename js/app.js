@@ -22,6 +22,12 @@ document.addEventListener('init', function (event) {
       $("#content")[0].load("home.html");  
       $("#sidemenu")[0].close();   
     });
+
+    $("#sweets").click(function () {
+      console.log(";;;;;;;");
+      
+      $("#content")[0].load("MenuSweet.html");   
+    });
   }
 
   if (page.id === 'loginPage') {
