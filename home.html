@@ -72,10 +72,10 @@
 
 
 
-                <ons-col modifier="nodivider" onclick="sweet()">
+                <ons-col modifier="nodivider" >
                     <div id="btn2" class="category_wrapper"
                         style="background-image: url('images/sweets.png');background-size: 100%;">
-                        <figure class="category_thumbnail" id="dessertbtn">
+                        <figure class="category_thumbnail" id="dessertbtn"  onclick="sweets()">
                             <div class="category_title" id="Category_1_name">Dessert</div>
                         </figure>
                     </div>
@@ -192,8 +192,11 @@
     }
 </style>
 
-<script>
-    function login() {
+<script>  
+    function cafe() {
+        window.location.href = 'MenuSweet.html'
+    } 
+    function sweets() {
         window.location.href = 'MenuSweet.html'
     } 
 </script>  
