@@ -1,9 +1,12 @@
 {
+  "name": "FoodMonkey",
+  "short_name": "FoodMonkey",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "browser",
+  "display": "standalone",
+  "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
