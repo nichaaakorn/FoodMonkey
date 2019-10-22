@@ -24,16 +24,45 @@ document.addEventListener('init', function (event) {
     });
 
     $("#sweets").click(function () {
-      console.log(";;;;;;;");
+      console.log("sweets");
       
-      $("#content")[0].load("Sweet.html");   
+      $("#myNavigator")[0].pushPage("Sweet.html");   
     });
 
     $("#street").click(function () {
       console.log(";;;;;;;");
       
-      $("#content")[0].load("MenuStreet.html");   
+      $("#myNavigator")[0].pushPage("Street.html");   
     });
+
+    $("#drink").click(function () {
+      console.log(";;;;;;;");
+      
+      $("#myNavigator")[0].pushPage("drink.html");   
+    });
+
+    
+    $("#islam").click(function () {
+      console.log(";;;;;;;");
+      
+      $("#myNavigator")[0].pushPage("Islam.html");   
+    });
+
+    
+ 
+
+  
+
+  }
+  if (page.id === 'mypage') {
+    console.log("mypage");
+    
+   $("#menuSweet").click(function () {
+      console.log(";;;;;;;");
+      
+      $("#myNavigator")[0].pushPage("MenuSweet.html");   
+    });
+
   }
 
   if (page.id === 'loginPage') {
