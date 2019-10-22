@@ -1,8 +1,8 @@
 <ons-page id="homePage">
 
- 
 
- 
+
+
     <ons-toolbar style="background-color:rgb(168, 150, 45)">
         <div class="left">
             <!-- Toolbar-button with different icons depending on the platform. -->
@@ -28,13 +28,13 @@
             <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
                 class="recomended_list" id="carousel">
                 <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
-                    <div class="thumbnail" style= "background-image: url('images/cake.jpg');background-size: 100%;">
+                    <div class="thumbnail" style="background-image: url('images/cake.jpg');background-size: 100%;">
                     </div>
-                    <div class="recomended_item_title" id="item1_name">Kathu Cafe</div>
+                    <div class="recomended_item_title" id="item1_name" onclick="cafe()">Kathu Cafe</div>
                 </ons-carousel-item>
                 <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
                     <div class="thumbnail" style="background-image: url('images/banana.jpg');background-size: 120%;">
-  
+
                     </div>
                     <div class="recomended_item_title" id="item1_name">Kluay Tod Kathu</div>
                 </ons-carousel-item>
@@ -49,13 +49,13 @@
                     </div>
                     <div class="recomended_item_title" id="item1_name">TamSang at Kathu</div>
                 </ons-carousel-item>
-                <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">  
-                    <div class="thumbnail" style="background-image: url('images/cha.jpg');background-size: 120%;"> 
+                <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
+                    <div class="thumbnail" style="background-image: url('images/cha.jpg');background-size: 120%;">
                     </div>
                     <div class="recomended_item_title" id="item1_name">Kin Cha</div>
                 </ons-carousel-item>
             </ons-carousel>
-        </div>   
+        </div>
         <div class="category_content">
             <h4 style="margin-top: 0px">Food Category</h4>
             <ons-row class="category">
@@ -70,9 +70,9 @@
                     </div>
                 </ons-col>
 
-  
 
-                <ons-col modifier="nodivider">
+
+                <ons-col modifier="nodivider" onclick="sweet()">
                     <div id="btn2" class="category_wrapper"
                         style="background-image: url('images/sweets.png');background-size: 100%;">
                         <figure class="category_thumbnail" id="dessertbtn">
@@ -90,7 +90,7 @@
                         style="background-image: url('images/drink.svg');background-size: 95%;">
                         <figure class="category_thumbnail" id="drinkbtn">
                             <div class="category_title" id="Category_1_name">Drink</div>
-                        </figure> 
+                        </figure>
                     </div>
                 </ons-col>
 
@@ -106,21 +106,22 @@
                 </ons-col>
 
             </ons-row>
- 
+
         </div>
 
 
 </ons-page>
+
 <style type="text/css">
     .recomended_item {
         padding-left: 10px;
-       
+
     }
 
     .recomended_item_title {
         font-size: 12px;
         font-weight: bold;
-        
+
     }
 
     .thumbnail {
@@ -133,7 +134,7 @@
     .recomended_list {
         height: 150px;
     }
- 
+
     .recomended {
         background-color: rgb(247, 246, 192);
 
@@ -155,7 +156,7 @@
         font-size: 16px;
     }
 
-    .category_content { 
+    .category_content {
         background-color: white;
     }
 
@@ -190,3 +191,9 @@
         padding-top: 20px;
     }
 </style>
+
+<script>
+    function login() {
+        window.location.href = 'MenuSweet.html'
+    } 
+</script>  

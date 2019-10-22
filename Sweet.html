@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Onsen App</title>
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+
+</head>
+
+<style>
+        #mypage .page__background {
+          background-color: rgb(233, 213, 98);
+        }
+      </style>
+
+<body>
+    <ons-navigator id="myNavigator" page="resturantlist.html"></ons-navigator>
+
+    <center>
+        <ons-page id='mypage'>
+            <ons-navigator title="Navigator" var="myNavigator"></ons-navigator>
+
+            <ons-page>
+                <p style="text-align: center; margin-top: 10px;">
+                    <ons-search-input placeholder="Search"
+                        onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
+                </p>
+
+
+                <ons-list-header  onclick="login()">Kathu Cafe</ons-list-header>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images/cake.jpg" style="width:100px; height:100px;">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
+                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
+                            <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
+                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                    </div>
+                </ons-list-item>
+
+
+                <ons-list-header>Nida at Kathu</ons-list-header>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images/cake.jpg" style="width:100px; height:100px;">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
+                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
+                            <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star-half"></ons-icon>
+                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                    </div>
+                </ons-list-item>
+
+
+                <ons-list-header>KluayTod Kathu</ons-list-header>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images/banana.jpg" style="width:100px; height:100px;">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title"><ons-icon icon="pin"></ons-icon>   kathu,phuket</span>
+                  <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
+                             <ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon><ons-icon icon="star"></ons-icon>
+                        <span class="list-item__subtitle"><ons-icon icon="bicycle"></ons-icon>  Free Delivery</span>
+                    </div>
+                </ons-list-item>
+
+
+            </ons-page>
+
+
+
+
+        </ons-page>
+    </center>
+
+    <script>
+        function login() {
+          window.location.href='MenuSweet.html' 
+        } 
+        </script>
+
+    
+</body>
+
+</html>
