@@ -8,8 +8,8 @@
   <title>FoodMonkey</title>
   <!-- firebase link  -->
   <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 
   <!-- onsen  link -->
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
@@ -32,13 +32,13 @@
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "AIzaSyC9V8Vz_q7041Mrj2GZSzFQbsQJmUWJYQM",
-      authDomain: "foodmonkey-36546.firebaseapp.com",
-      databaseURL: "https://foodmonkey-36546.firebaseio.com",
-      projectId: "foodmonkey-36546",
-      storageBucket: "foodmonkey-36546.appspot.com",
-      messagingSenderId: "249648993939",
-      appId: "1:249648993939:web:d61b879f1bb3b1d1695f66"
+    apiKey: "AIzaSyDIx32uGBJ3GGfRFRAeMyXieh7sg__lQvg",
+    authDomain: "foodmonkey-457b5.firebaseapp.com",
+    databaseURL: "https://foodmonkey-457b5.firebaseio.com",
+    projectId: "foodmonkey-457b5",
+    storageBucket: "foodmonkey-457b5.appspot.com",
+    messagingSenderId: "924489167542",
+    appId: "1:924489167542:web:8c481d88eaec4784886c17"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -115,41 +115,32 @@
     };
 
       function google() {
-        firebase.auth().signOut().then(function () {
-          // Sign-out successful.
-          console.log("signed out");
+      var provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      firebase.auth().signInWithPopup(provider).then(function (result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    }
 
-        }).then(function () {
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithPopup(provider).then(function (result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            // ...
-            console.log("user email"+user.email+"signed in");
-          }).then(function () {
-            window.location.href = 'index.html';
-          }).catch(function (error) {  
-            // Handle Errors here.s
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-          });
-        }).catch(function (error) {
-          // An error happened.
-        });  
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        window.location.href = 'index.html';
 
       }
-
-
-
-    
-
+    });
 
 
     function regiter() {
