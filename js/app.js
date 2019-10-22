@@ -56,14 +56,21 @@ document.addEventListener('init', function (event) {
   }
   if (page.id === 'mypage') {
     console.log("mypage");
-    
+
    $("#menuSweet").click(function () {
       console.log(";;;;;;;");
       
       $("#myNavigator")[0].pushPage("MenuSweet.html");   
     });
 
-  }
+  
+   $("#menuStreet").click(function () {
+        console.log(";;;;;;;");
+        
+      $("#myNavigator")[0].pushPage("MenuStreet.html");   
+    });
+  
+      }
 
   if (page.id === 'loginPage') {
     console.log("loginPage");
