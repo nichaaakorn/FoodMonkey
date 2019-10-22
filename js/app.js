@@ -23,6 +23,11 @@ document.addEventListener('init', function (event) {
       $("#sidemenu")[0].close();
     });
 
+    $("#signedout").click(function () {
+      $("#content")[0].load("login.html");
+      $("#sidemenu")[0].close();
+    });
+
     $("#sweets").click(function () {
       console.log("sweets");
 

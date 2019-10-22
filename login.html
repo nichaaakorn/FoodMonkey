@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FoodMonkey</title>
   <!-- firebase link  -->
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
 
@@ -16,9 +15,10 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <!-- link font -->
+  <title>Onsen App</title>
   <link href="https://fonts.googleapis.com/css?family=Lobster|Saira+Stencil+One&display=swap" rel="stylesheet">
   <style>
-    #login .page__background {   
+    #login .page__background {
       background-color: gold;
     }
   </style>
@@ -43,11 +43,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    // use firestore 
-    var db = firebase.firestore();
-
   </script>
-
 </head>
 
 
@@ -58,7 +54,7 @@
     <center>
       <ons-page id='login'>
         <div>
-
+          
           <p>
             <img src="images/logo_monkey.jpg" alt="Logo FoodMonkey" style="width:180px;height:160px; padding: 2em;">
             <b style="font-family: 'Squada One', cursive; font-size: 30px; padding: 5px;" id="text">FoodMonkey</b>
@@ -114,7 +110,7 @@
 
     };
 
-      function google() {
+    function google() {
       var provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
       firebase.auth().signInWithPopup(provider).then(function (result) {
@@ -149,5 +145,6 @@
     }
   </script>
 </body>
+
 
 </html>
