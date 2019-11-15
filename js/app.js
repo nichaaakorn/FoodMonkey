@@ -23,6 +23,11 @@ document.addEventListener('init', function (event) {
       $("#sidemenu")[0].close();
     });
 
+    $("#address").click(function () { 
+      $("#content")[0].load("address.html");
+      $("#sidemenu")[0].close();
+    });
+
     $("#signedout").click(function () {
       $("#content")[0].load("login.html");
       $("#sidemenu")[0].close();
@@ -125,7 +130,7 @@ document.addEventListener('init', function (event) {
       $("#myNavigator")[0].pushPage("MenuDrink2.html");
     });
 
-    $("#menuIslam").click(function () {
+    $("#menuIslam").click(function () { 
       console.log(";;;;;;;");
 
       $("#myNavigator")[0].pushPage("MenuIslam.html");
@@ -146,4 +151,6 @@ document.addEventListener('init', function (event) {
       $("#content")[0].load("home.html");
     });
   }
+
 });
+
