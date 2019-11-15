@@ -28,6 +28,11 @@ document.addEventListener('init', function (event) {
       $("#sidemenu")[0].close();
     });
 
+    $("#signin").click(function () { 
+      $("#content")[0].load("login2.html");
+      $("#sidemenu")[0].close();
+    });
+
     $("#signedout").click(function () {
       $("#content")[0].load("login.html");
       $("#sidemenu")[0].close();
@@ -141,6 +146,7 @@ document.addEventListener('init', function (event) {
 
       $("#myNavigator")[0].pushPage("MenuIslam2.html");
     });
+
 
   }
 
