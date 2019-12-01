@@ -23,11 +23,6 @@ document.addEventListener('init', function (event) {
       $("#sidemenu")[0].close();
     });
 
-    $("#address").click(function () { 
-      $("#content")[0].load("address.html");
-      $("#sidemenu")[0].close();
-    });
-
     $("#signin").click(function () { 
       $("#content")[0].load("login2.html");
       $("#sidemenu")[0].close();
@@ -61,6 +56,12 @@ document.addEventListener('init', function (event) {
       console.log(";;;;;;;");
 
       $("#myNavigator")[0].pushPage("Islam.html");
+    });
+
+    $("#address").click(function () {
+      console.log(";;;;;;;");
+
+      $("#myNavigator")[0].pushPage("address.html");
     });
 
 
