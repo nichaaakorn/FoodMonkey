@@ -23,12 +23,12 @@ document.addEventListener('init', function (event) {
       $("#sidemenu")[0].close();
     });
 
-    $("#signin").click(function () { 
-      $("#content")[0].load("login2.html");
+    $("#login").click(function () { 
+      $("#content")[0].load("login.html");
       $("#sidemenu")[0].close();
     });
 
-    $("#signedout").click(function () {
+    $("#logout").click(function () {
       $("#content")[0].load("login.html");
       $("#sidemenu")[0].close();
     });
